@@ -1,4 +1,0 @@
-Invoking command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/zhangwencheng/Documents/project/town_ws/build/village_wang -- -j12 -l12
-Invoked command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/zhangwencheng/Documents/project/town_ws/build/village_wang -- -j12 -l12
-Invoking command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/zhangwencheng/Documents/project/town_ws/build/village_wang
-Invoked command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/zhangwencheng/Documents/project/town_ws/build/village_wang
