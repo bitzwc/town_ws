@@ -1,4 +1,4 @@
-./idea
-./build
-./install
-./log
+.idea/
+build/
+install/
+log/
