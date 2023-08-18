@@ -1,0 +1,26 @@
+[0.197s] Invoking command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --build /home/zhangwencheng/Documents/project/town_ws/build/village_wang -- -j12 -l12
+[0.231s] [35m[1mScanning dependencies of target wang2_node[0m
+[0.250s] [ 50%] [32mBuilding CXX object CMakeFiles/wang2_node.dir/src/wang2.cpp.o[0m
+[1.721s] [100%] [32m[1mLinking CXX executable wang2_node[0m
+[1.804s] [100%] Built target wang2_node
+[1.814s] Invoked command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --build /home/zhangwencheng/Documents/project/town_ws/build/village_wang -- -j12 -l12
+[1.840s] Invoking command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --install /home/zhangwencheng/Documents/project/town_ws/build/village_wang
+[1.846s] -- Install configuration: ""
+[1.846s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/ament_index/resource_index/package_run_dependencies/village_wang
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/ament_index/resource_index/parent_prefix_path/village_wang
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/environment/ament_prefix_path.sh
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/environment/ament_prefix_path.dsv
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/environment/path.sh
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/environment/path.dsv
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/local_setup.bash
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/local_setup.sh
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/local_setup.zsh
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/local_setup.dsv
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/package.dsv
+[1.847s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/ament_index/resource_index/packages/village_wang
+[1.848s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/cmake/village_wangConfig.cmake
+[1.848s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/cmake/village_wangConfig-version.cmake
+[1.848s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/share/village_wang/package.xml
+[1.848s] -- Installing: /home/zhangwencheng/Documents/project/town_ws/install/village_wang/lib/village_wang/wang2_node
+[1.848s] -- Set runtime path of "/home/zhangwencheng/Documents/project/town_ws/install/village_wang/lib/village_wang/wang2_node" to ""
+[1.851s] Invoked command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --install /home/zhangwencheng/Documents/project/town_ws/build/village_wang

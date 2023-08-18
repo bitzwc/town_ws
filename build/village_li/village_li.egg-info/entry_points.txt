@@ -1,0 +1,3 @@
+[console_scripts]
+lisi_node = village_li.lisi:main
+

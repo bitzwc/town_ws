@@ -1,0 +1,120 @@
+[0.187s] Invoking command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake /home/zhangwencheng/Documents/project/town_ws/src/village_wang -DCMAKE_INSTALL_PREFIX=/home/zhangwencheng/Documents/project/town_ws/install/village_wang
+[0.228s] -- The C compiler identification is GNU 9.4.0
+[0.265s] -- The CXX compiler identification is GNU 9.4.0
+[0.268s] -- Check for working C compiler: /usr/bin/cc
+[0.317s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.318s] -- Detecting C compiler ABI info
+[0.365s] -- Detecting C compiler ABI info - done
+[0.374s] -- Detecting C compile features
+[0.374s] -- Detecting C compile features - done
+[0.376s] -- Check for working CXX compiler: /usr/bin/c++
+[0.435s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.436s] -- Detecting CXX compiler ABI info
+[0.498s] -- Detecting CXX compiler ABI info - done
+[0.510s] -- Detecting CXX compile features
+[0.510s] -- Detecting CXX compile features - done
+[0.511s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.529s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.529s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.691s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.726s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.731s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.785s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.808s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.864s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.913s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.914s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.915s] -- Looking for pthread.h
+[0.964s] -- Looking for pthread.h - found
+[0.965s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.018s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.018s] -- Looking for pthread_create in pthreads
+[1.061s] -- Looking for pthread_create in pthreads - not found
+[1.061s] -- Looking for pthread_create in pthread
+[1.113s] -- Looking for pthread_create in pthread - found
+[1.113s] -- Found Threads: TRUE  
+[1.237s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.289s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.290s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.291s] -- Configured cppcheck include dirs: 
+[1.291s] -- Configured cppcheck exclude dirs and/or files: 
+[1.291s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.291s] -- Configured cpplint exclude dirs and/or files: 
+[1.292s] -- Added test 'lint_cmake' to check CMake code style
+[1.293s] -- Added test 'uncrustify' to check C / C++ code style
+[1.293s] -- Configured uncrustify additional arguments: 
+[1.293s] -- Added test 'xmllint' to check XML markup files
+[1.296s] -- Configuring done
+[1.301s] -- Generating done
+[1.302s] -- Build files have been written to: /home/zhangwencheng/Documents/project/town_ws/build/village_wang
+[1.310s] Invoked command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake /home/zhangwencheng/Documents/project/town_ws/src/village_wang -DCMAKE_INSTALL_PREFIX=/home/zhangwencheng/Documents/project/town_ws/install/village_wang
+[1.312s] Invoking command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --build /home/zhangwencheng/Documents/project/town_ws/build/village_wang -- -j12 -l12
+[1.341s] [35m[1mScanning dependencies of target wang2_node[0m
+[1.364s] [ 50%] [32mBuilding CXX object CMakeFiles/wang2_node.dir/src/wang2.cpp.o[0m
+[2.306s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.307s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:5:55:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’ to non-scalar type ‘[01m[Krclcpp::Node[m[K’ requested
+[2.307s]     5 |     rclcpp::Node node = [01;31m[Kstd::make_shared<rclcpp::Node>("wang2")[m[K;
+[2.307s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[2.307s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.308s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.308s]                  from [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:1[m[K:
+[2.308s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:6:21:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Krclcpp::Node[m[K’
+[2.308s]     6 |     RCLCPP_INFO(node[01;31m[K->[m[Kget_logger(), "大家好，我是王二");
+[2.308s]       |                     [01;31m[K^~[m[K
+[2.308s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:6:21:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Krclcpp::Node[m[K’
+[2.308s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:6:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.308s]     6 |     [01;31m[KRCLCPP_INFO[m[K(node->get_logger(), "大家好，我是王二");
+[2.308s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.308s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:6:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.308s]     6 |     [01;31m[KRCLCPP_INFO[m[K(node->get_logger(), "大家好，我是王二");
+[2.308s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.308s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:6:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.308s]     6 |     [01;31m[KRCLCPP_INFO[m[K(node->get_logger(), "大家好，我是王二");
+[2.308s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.308s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.308s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.308s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.308s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.308s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.309s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.309s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.309s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.309s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.309s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.309s]                  from [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:1[m[K:
+[2.309s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:6:21:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Krclcpp::Node[m[K’
+[2.309s]     6 |     RCLCPP_INFO(node[01;31m[K->[m[Kget_logger(), "大家好，我是王二");
+[2.309s]       |                     [01;31m[K^~[m[K
+[2.309s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:6:21:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Krclcpp::Node[m[K’
+[2.309s]     6 |     RCLCPP_INFO(node[01;31m[K->[m[Kget_logger(), "大家好，我是王二");
+[2.309s]       |                     [01;31m[K^~[m[K
+[2.309s] [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:7:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(rclcpp::Node&)[m[K’
+[2.309s]     7 |     rclcpp::spin(node[01;31m[K)[m[K;
+[2.310s]       |                      [01;31m[K^[m[K
+[2.310s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.310s]                  from [01m[K/home/zhangwencheng/Documents/project/town_ws/src/village_wang/src/wang2.cpp:1[m[K:
+[2.310s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+[2.310s]    45 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[2.310s]       | [01;36m[K^~~~[m[K
+[2.310s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Node[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>[m[K’}
+[2.310s]    45 | pin([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K);
+[2.310s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[2.310s] 
+[2.310s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)[m[K’
+[2.311s]    49 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+[2.311s]       | [01;36m[K^~~~[m[K
+[2.311s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Node[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
+[2.311s]    49 | spin([01;36m[Krclcpp::Node::SharedPtr node_ptr[m[K);
+[2.311s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[2.576s] make[2]: *** [CMakeFiles/wang2_node.dir/build.make:63: CMakeFiles/wang2_node.dir/src/wang2.cpp.o] Error 1
+[2.576s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/wang2_node.dir/all] Error 2
+[2.576s] make: *** [Makefile:141: all] Error 2
+[2.578s] Invoked command in '/home/zhangwencheng/Documents/project/town_ws/build/village_wang' returned '2': CMAKE_PREFIX_PATH=/home/zhangwencheng/Documents/project/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --build /home/zhangwencheng/Documents/project/town_ws/build/village_wang -- -j12 -l12

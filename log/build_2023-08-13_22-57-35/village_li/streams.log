@@ -1,0 +1,24 @@
+[0.560s] Invoking command in '/home/zhangwencheng/Documents/project/town_ws/src/village_li': PYTHONPATH=/home/zhangwencheng/Documents/project/town_ws/build/village_li/prefix_override:/home/zhangwencheng/Documents/project/town_ws/install/village_li/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/village_li build --build-base /home/zhangwencheng/Documents/project/town_ws/build/village_li/build install --record /home/zhangwencheng/Documents/project/town_ws/build/village_li/install.log --install-scripts $base/lib/village_li --single-version-externally-managed
+[0.723s] running egg_info
+[0.723s] writing ../../build/village_li/village_li.egg-info/PKG-INFO
+[0.724s] writing dependency_links to ../../build/village_li/village_li.egg-info/dependency_links.txt
+[0.724s] writing entry points to ../../build/village_li/village_li.egg-info/entry_points.txt
+[0.724s] writing requirements to ../../build/village_li/village_li.egg-info/requires.txt
+[0.724s] writing top-level names to ../../build/village_li/village_li.egg-info/top_level.txt
+[0.749s] reading manifest file '../../build/village_li/village_li.egg-info/SOURCES.txt'
+[0.750s] writing manifest file '../../build/village_li/village_li.egg-info/SOURCES.txt'
+[0.750s] running build
+[0.750s] running build_py
+[0.750s] copying village_li/lisi.py -> /home/zhangwencheng/Documents/project/town_ws/build/village_li/build/lib/village_li
+[0.751s] running install
+[0.751s] running install_lib
+[0.752s] copying /home/zhangwencheng/Documents/project/town_ws/build/village_li/build/lib/village_li/lisi.py -> /home/zhangwencheng/Documents/project/town_ws/install/village_li/lib/python3.8/site-packages/village_li
+[0.752s] byte-compiling /home/zhangwencheng/Documents/project/town_ws/install/village_li/lib/python3.8/site-packages/village_li/lisi.py to lisi.cpython-38.pyc
+[0.753s] running install_data
+[0.754s] running install_egg_info
+[0.755s] removing '/home/zhangwencheng/Documents/project/town_ws/install/village_li/lib/python3.8/site-packages/village_li-0.0.0-py3.8.egg-info' (and everything under it)
+[0.755s] Copying ../../build/village_li/village_li.egg-info to /home/zhangwencheng/Documents/project/town_ws/install/village_li/lib/python3.8/site-packages/village_li-0.0.0-py3.8.egg-info
+[0.756s] running install_scripts
+[0.767s] Installing lisi_node script to /home/zhangwencheng/Documents/project/town_ws/install/village_li/lib/village_li
+[0.768s] writing list of installed files to '/home/zhangwencheng/Documents/project/town_ws/build/village_li/install.log'
+[0.784s] Invoked command in '/home/zhangwencheng/Documents/project/town_ws/src/village_li' returned '0': PYTHONPATH=/home/zhangwencheng/Documents/project/town_ws/build/village_li/prefix_override:/home/zhangwencheng/Documents/project/town_ws/install/village_li/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/village_li build --build-base /home/zhangwencheng/Documents/project/town_ws/build/village_li/build install --record /home/zhangwencheng/Documents/project/town_ws/build/village_li/install.log --install-scripts $base/lib/village_li --single-version-externally-managed
