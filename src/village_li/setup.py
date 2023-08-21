@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "li4_node = village_li.li4:main"
+            "li4_node = village_li.li4:main",
+            "li3_node = village_li.li3:main"
         ],
     },
 )
