@@ -27,11 +27,12 @@ public:
         //创建回调函数组对象
         callback_group_service_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 
-        //创建服务端，用于提供买书服务
-        server_ = this->create_service<village_interface::srv::SellNovel>(
+        //创建服务端，用于提供买书服务，服务的输入和输出用SellNovel结构，服务调用sell_book_callback
+        server_ = this->create_service<village_interfaces::srv::SellNovel>(
             "sell_novel",                             
-            std::bind(&SingleDogNode::sell_book_callback,this,_1,_2),
-            
+            std::bind(&SingleDogNode::sell_book_callback,this,_1,_2), //两个输入参数，占位
+            rmw_qos_profile_services_default, //通信质量，这里使用服务默认的通信质量
+            callback_group_service_ //回调组，我们前面创建回调组就是在这里使用的，告诉ROS2，当你要调用回调函数处理请求时，请把它放到单独线程的回调组中
         );
     };
 
@@ -60,6 +61,9 @@ private:
         //发送人民币给李四
         pub_money->publish(money);
         RCLCPP_INFO(this->get_logger(), "朕已阅：'%s'，打赏李四：%d 元的稿费", msg->data.c_str(), money.data);
+
+        //攒书，写入队列
+        novels_queue.push(msg->data);
     };
 
     //声明一个回调函数，当收到买书请求时调用该函数，用于处理数据
@@ -67,6 +71,26 @@ private:
         const village_interfaces::srv::SellNovel::Response::SharedPtr response)
     {
         //对请求数据进行处理
+        //收到买书请求时，给了钱 request.money，需要给多少章书，看看书库里是否够novels_queue，不够就攒，在topic_callback中写入队列
+        RCLCPP_INFO(this->get_logger(), "收到钱%d", request->money);
+
+        // 设置rate周期为1s，代表1s检查一次
+        rclcpp::Rate loop_rate(1);
+
+        //买书的章节数
+        int request_novel_num = request->money * 1;
+        while(novels_queue.size() < request_novel_num){
+            //打印一下当前的章节数量和缺少的数量
+            RCLCPP_INFO(this->getlogger(), "书库的书有%d章，不够卖，继续攒书", novels_queue.size());
+            
+            //rate.sleep()让整个循环1s运行一次
+            loop_rate.sleep();
+        }
+        //跳出循环，队列满足买书需求
+        for(int i = 0; i < request_novel_num; i++){
+            std::string novel = novels_queue.pop();
+            novel
+        }
     }
 
 };
