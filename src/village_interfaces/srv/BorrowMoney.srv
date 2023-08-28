@@ -1,0 +1,7 @@
+#输入参数，客户端传入
+string name
+uint32 money
+---
+#输出参数，服务端输出
+bool success
+uint32 money
