@@ -78,18 +78,25 @@ private:
         rclcpp::Rate loop_rate(1);
 
         //买书的章节数
-        int request_novel_num = request->money * 1;
-        while(novels_queue.size() < request_novel_num){
+        unsigned int requestNovelNum = request->money * 1;
+        while(novels_queue.size() < requestNovelNum){
+            //判断系统是否还在运行
+            if(!rclcpp::ok())
+            {
+                RCLCPP_ERROR(this->get_logger(), "程序被终止了");
+                return ;
+            }
+
             //打印一下当前的章节数量和缺少的数量
-            RCLCPP_INFO(this->getlogger(), "书库的书有%d章，不够卖，继续攒书", novels_queue.size());
-            
+            RCLCPP_INFO(this->get_logger(), "书库的书有%d章，不够卖，继续攒书", novels_queue.size());
+
             //rate.sleep()让整个循环1s运行一次
             loop_rate.sleep();
         }
-        //跳出循环，队列满足买书需求
-        for(int i = 0; i < request_novel_num; i++){
-            std::string novel = novels_queue.pop();
-            novel
+        //队列满足买书需求，跳出循环
+        for(unsigned int i = 0; i < requestNovelNum; i++){
+            response->novels.push_back(novels_queue.front());//
+            novels_queue.pop();//
         }
     }
 
@@ -99,7 +106,9 @@ int main(int argc, char **argv){
     rclcpp::init(argc, argv);
     auto node = std::make_shared<SingleDogNode>("wang2");
     // RCLCPP_INFO(node->get_logger(), "大家好，我是王二");
-    rclcpp::spin(node);
+    rclcpp::executors::MultiThreadedExecutor executor; //多线程执行器
+    executor.add_node(node);
+    executor.spin();
     rclcpp::shutdown();
     return 0;
 }
