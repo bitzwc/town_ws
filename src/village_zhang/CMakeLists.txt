@@ -37,3 +37,7 @@ ament_target_dependencies(zhang3_node
   rclcpp 
   village_interfaces
 )
+install(TARGETS 
+  zhang3_node
+  DESTINATION lib/${PROJECT_NAME}
+)

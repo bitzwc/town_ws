@@ -34,6 +34,12 @@ public:
             rmw_qos_profile_services_default, //通信质量，这里使用服务默认的通信质量
             callback_group_service_ //回调组，我们前面创建回调组就是在这里使用的，告诉ROS2，当你要调用回调函数处理请求时，请把它放到单独线程的回调组中
         );
+
+        //声明一下书的单价
+        unsigned int novel_price = 1;
+
+        //设置参数
+        this->declare_parameter<std::uint32_t>("novel_price", novel_price); //这里为什么非要加上泛型？
     };
 
 private:
@@ -78,7 +84,9 @@ private:
         rclcpp::Rate loop_rate(1);
 
         //买书的章节数
-        unsigned int requestNovelNum = request->money * 1;
+        //更新参数
+        std::uint32_t novel_price = this->get_parameter("novel_price").as_int();
+        unsigned int requestNovelNum = int(request->money / novel_price);
         while(novels_queue.size() < requestNovelNum){
             //判断系统是否还在运行
             if(!rclcpp::ok())
