@@ -34,7 +34,14 @@ ament_package()
 
 add_executable(wang2_node src/wang2.cpp)
 ament_target_dependencies(wang2_node rclcpp)
-install(TARGETS 
+install(TARGETS
   wang2_node
   DESTINATION lib/${PROJECT_NAME}
+)
+
+# 将launch、config目录打包进install/share/village_wang/下
+install(DIRECTORY
+launch
+config
+DESTINATION share/${PROJECT_NAME}/
 )

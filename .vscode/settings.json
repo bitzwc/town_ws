@@ -1,5 +1,13 @@
 {
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ],
+    "cmake.sourceDirectory": "/home/zhangwencheng/Documents/project/town_ws/src/village_interfaces",
     "files.associations": {
+        "ostream": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
@@ -19,7 +27,6 @@
         "*.tcc": "cpp",
         "bitset": "cpp",
         "chrono": "cpp",
-        "codecvt": "cpp",
         "complex": "cpp",
         "condition_variable": "cpp",
         "cstdint": "cpp",
@@ -39,7 +46,6 @@
         "optional": "cpp",
         "random": "cpp",
         "ratio": "cpp",
-        "regex": "cpp",
         "string": "cpp",
         "string_view": "cpp",
         "system_error": "cpp",
@@ -56,7 +62,6 @@
         "limits": "cpp",
         "mutex": "cpp",
         "new": "cpp",
-        "ostream": "cpp",
         "shared_mutex": "cpp",
         "sstream": "cpp",
         "stdexcept": "cpp",
@@ -67,6 +72,5 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp"
-    },
-    "cmake.sourceDirectory": "/home/zhangwencheng/Documents/project/town_ws/src/village_wang"
+    }
 }
