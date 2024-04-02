@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(village_wang)
+project(village_zhang)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -32,22 +32,12 @@ if(BUILD_TESTING)
 endif()
 
 ament_package()
-
-add_executable(wang2_node src/wang2.cpp)
-<<<<<<< HEAD
-ament_target_dependencies(wang2_node rclcpp)
-install(TARGETS
-=======
-ament_target_dependencies(wang2_node rclcpp village_interfaces)
-install(TARGETS 
->>>>>>> 525b18b9634066c324fb6a9c651524fa9e13056d
-  wang2_node
-  DESTINATION lib/${PROJECT_NAME}
+add_executable(zhang3_node src/zhang3.cpp)
+ament_target_dependencies(zhang3_node
+  rclcpp 
+  village_interfaces
 )
-
-# 将launch、config目录打包进install/share/village_wang/下
-install(DIRECTORY
-launch
-config
-DESTINATION share/${PROJECT_NAME}/
+install(TARGETS 
+  zhang3_node
+  DESTINATION lib/${PROJECT_NAME}
 )
